@@ -1,0 +1,213 @@
+/* Reset and base setup */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #43cea2, #f5a510, #df0b0b);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #e0e0e0;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+header {
+  height: auto;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #ff5722;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+header img {
+  width: 90px;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+/* Hero */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.85;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Video Embed */
+iframe {
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Firefox Showcase */
+.firefox-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.firefox-showcase img {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.firefox-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.firefox-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff5722;
+}
+
+.firefox-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Further Info Images */
+.image-links {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.image-links a {
+  display: block;
+  width: 100px;
+}
+
+.image-links img {
+  width: 100%;
+  border-radius: 10px;
+  filter: brightness(0.95);
+  transition: transform 0.2s ease;
+}
+
+.image-links img:hover {
+  transform: scale(1.1);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #2575fc;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(38, 0, 102, 0.7);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 14px 30px rgba(38, 0, 102, 0.85);
+}
+
+/* Red Panda Image */
+.red-panda img {
+  display: block;
+  max-width: 250px;
+  margin: 3rem auto 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Links */
+a {
+  color: #90caf9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .firefox-showcase {
+    flex-direction: column;
+    text-align: center;
+  }
+  .firefox-text {
+    text-align: center;
+  }
+}
