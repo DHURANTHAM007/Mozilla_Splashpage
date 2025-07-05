@@ -7,9 +7,9 @@
 
 html {
   font-family: "Open Sans", sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc, #43cea2, #f5a510, #df0b0b);
-  background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  background: linear-gradient(135deg, #2b0053, #0a0a0a);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
   color: #e0e0e0;
   scroll-behavior: smooth;
 }
@@ -23,7 +23,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #1e1e1e;
+  background-color: #151515;
   padding: 2rem 1rem;
 }
 
@@ -38,7 +38,7 @@ header {
 header h1 {
   font-size: 3rem;
   line-height: 1.2;
-  color: #ff5722;
+  color: #b388ff;
   margin-bottom: 1rem;
   text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
@@ -84,7 +84,7 @@ header img {
 }
 
 .feature h3 {
-  color: #fff;
+  color: #e0e0e0;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -128,7 +128,7 @@ iframe {
 .firefox-text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #ff5722;
+  color: #b388ff;
 }
 
 .firefox-text p {
@@ -165,10 +165,10 @@ iframe {
 .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: #2575fc;
+  background-color: #b388ff;
   border: none;
   border-radius: 50px;
-  color: #fff;
+  color: #151515;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
@@ -182,18 +182,9 @@ iframe {
   box-shadow: 0 14px 30px rgba(38, 0, 102, 0.85);
 }
 
-/* Red Panda Image */
-.red-panda img {
-  display: block;
-  max-width: 250px;
-  margin: 3rem auto 0;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-}
-
 /* Links */
 a {
-  color: #90caf9;
+  color: #d1bfff;
   text-decoration: none;
 }
 
