@@ -1,17 +1,20 @@
-/* Reset and base setup */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Open Sans", sans-serif;
-  background: linear-gradient(135deg, #2b0053, #0a0a0a);
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* Updated gradient from purple to black */
+  background: linear-gradient(135deg, #4c1d95, #000000);
   background-size: 200% 200%;
-  animation: gradientShift 15s ease infinite;
-  color: #e0e0e0;
-  scroll-behavior: smooth;
+  animation: gradientShift 12s ease infinite;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes gradientShift {
@@ -19,55 +22,48 @@ html {
   50% { background-position: 100% 50%; }
 }
 
-body {
+.container {
+  max-width: 1100px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #151515;
-  padding: 2rem 1rem;
+  text-align: center;
 }
 
-/* Header */
 header {
-  height: auto;
-  text-align: center;
-  position: relative;
   margin-bottom: 2rem;
 }
 
 header h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  color: #b388ff;
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  font-weight: 900;
   text-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 header img {
-  width: 90px;
-  position: absolute;
-  right: 2rem;
-  top: 1rem;
+  width: 80px;
+  margin-top: 1rem;
 }
 
-/* Hero */
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: #ffffff;
+  margin-top: 1rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
   opacity: 0.85;
-  text-align: center;
-  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
-/* Features Grid */
+iframe {
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -76,48 +72,37 @@ header img {
 }
 
 .feature {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 18px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .feature h3 {
-  color: #e0e0e0;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .feature p {
-  color: #ccc;
   font-size: 1rem;
-  line-height: 1.6;
+  color: #e0e0e0;
 }
 
-/* Video Embed */
-iframe {
-  max-width: 100%;
-  border-radius: 16px;
-  margin: 2rem auto;
-  display: block;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Firefox Showcase */
 .firefox-showcase {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
-  align-items: center;
   margin: 4rem 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .firefox-showcase img {
   width: 300px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .firefox-text {
@@ -127,16 +112,15 @@ iframe {
 
 .firefox-text h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #b388ff;
+  margin-bottom: 0.5rem;
 }
 
 .firefox-text p {
   font-size: 1.1rem;
   line-height: 1.5;
+  color: #ddd;
 }
 
-/* Further Info Images */
 .image-links {
   margin: 3rem 0;
   display: flex;
@@ -145,15 +129,10 @@ iframe {
   gap: 1.5rem;
 }
 
-.image-links a {
-  display: block;
-  width: 100px;
-}
-
 .image-links img {
-  width: 100%;
+  width: 100px;
+  height: auto;
   border-radius: 10px;
-  filter: brightness(0.95);
   transition: transform 0.2s ease;
 }
 
@@ -161,44 +140,30 @@ iframe {
   transform: scale(1.1);
 }
 
-/* CTA Button */
 .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background-color: #b388ff;
+  background-color: #7c3aed;
   border: none;
   border-radius: 50px;
-  color: #151515;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(38, 0, 102, 0.7);
+  box-shadow: 0 10px 25px rgba(76, 29, 149, 0.7);
   transition: all 0.3s ease;
-  margin-top: 1rem;
 }
 
 .cta-button:hover {
   transform: scale(1.05) translateY(-4px);
-  box-shadow: 0 14px 30px rgba(38, 0, 102, 0.85);
+  box-shadow: 0 14px 30px rgba(76, 29, 149, 0.85);
 }
 
-/* Links */
-a {
-  color: #d1bfff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
   .firefox-showcase {
     flex-direction: column;
     text-align: center;
   }
-  .firefox-text {
-    text-align: center;
-  }
+  .firefox-text { text-align: center; }
 }
