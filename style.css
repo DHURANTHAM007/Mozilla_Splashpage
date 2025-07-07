@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  /* Updated gradient from purple to black */
+  /* MODIFIED: Changed gradient to purple-black */
   background: linear-gradient(135deg, #4c1d95, #000000);
   background-size: 200% 200%;
   animation: gradientShift 12s ease infinite;
@@ -143,6 +143,7 @@ iframe {
 .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
+  /* MODIFIED: Changed button color for better contrast */
   background-color: #7c3aed;
   border: none;
   border-radius: 50px;
